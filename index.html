@@ -2,30 +2,37 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Zen</title>
+    <title>Multiplayer Game</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
     <script src="p5.play.js"></script>
-    <script src="game.js"></script>
-    <script src="form.js"></script>
-    <script src="player.js"></script>
+
     <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
 
 
     <script>
-     const firebaseConfig = {
+      //Your web app's Firebase configuration
+      
+      // // Initialize Firebase
+      // firebase.initializeApp(firebaseConfig);
+      const firebaseConfig = {
   apiKey: "AIzaSyB-Ar6gRjd08kaux_xFm9iIi9hMH5-Qe-0",
   authDomain: "jogo-de-humaninhos.firebaseapp.com",
   databaseURL: "https://jogo-de-humaninhos-default-rtdb.firebaseio.com",
   projectId: "jogo-de-humaninhos",
   storageBucket: "jogo-de-humaninhos.appspot.com",
   messagingSenderId: "932655533433",
-  appId: "1:932655533433:web:bace9a04bf0ab085a8b3a8"
+  appId: "1:932655533433:web:2a87b1aca579c6e8a8b3a8"
 };
-      firebase.initializeApp(firebaseConfig);
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
     </script>
+
+    <script src="js/Player.js"></script>
+    <script src="js/Form.js"></script>
+    <script src="js/Game.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
   <body>
