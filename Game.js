@@ -47,8 +47,8 @@ class Game {
     player.getRanking();
 
     if(allPlayers !== undefined){
-      background(rgb(198,135,103));
-      image(track, 0,-displayHeight*4,displayWidth, displayHeight*5);
+      background("yellow")
+      image(track, 0,-height*5,width, height*6);
       
       //var display_position = 100;
       
@@ -67,7 +67,7 @@ class Game {
         //x = x + 200;
         x = allPlayers[plr].left_and_right;
         //use data form the database to display the cars in y direction
-        y = displayHeight - allPlayers[plr].distance;
+        y =height - allPlayers[plr].distance;
         cars[index-1].x = x;
         cars[index-1].y = y;
 
@@ -92,15 +92,15 @@ class Game {
       player.distance -=10
       player.update();
     }
-    if(keyIsDown(RIGHT_ARROW) && player.index !== null){
+    if(keyIsDown(RIGHT_ARROW) && player.index !== null&&player.left_and_right<width-240){
       player.left_and_right +=10
       player.update();
     }
-    if(keyIsDown(LEFT_ARROW) && player.index !== null){
+    if(keyIsDown(LEFT_ARROW) && player.index !== null&&player.left_and_right>240){
       player.left_and_right -=10
       player.update();
     }
-    if(player.distance > 3860){
+    if(player.distance > height*6-200){
       gameState = 2;
       player.ranking+=1;
       Player.updateRanking(player.ranking);
@@ -112,5 +112,9 @@ class Game {
   end(){
     console.log("Game Ended");
     console.log(player.ranking);
-  }
+    player.updateCount(0);
+    Player.updateRanking(0);
+  game.update(0)
+  } 
+   
 }

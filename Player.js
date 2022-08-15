@@ -9,16 +9,16 @@ class Player {
 addPlayer(){
   var playerIndex = "players/player" + this.index;
   if (this.index==1){
-    this.left_and_right =200
+    this.left_and_right =300
   }
   if (this.index==2){
-    this.left_and_right =400
+    this.left_and_right =500
   }
   if (this.index==3){
-    this.left_and_right =600
+    this.left_and_right =700
   }
   if (this.index==4){
-    this.left_and_right =800
+    this.left_and_right =900
   }
   database.ref(playerIndex).set({
     name:this.name,
