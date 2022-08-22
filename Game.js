@@ -47,7 +47,7 @@ class Game {
     player.getRanking();
 
     if(allPlayers !== undefined){
-      background("yellow")
+      background(track2)
       image(track, 0,-height*5,width, height*6);
       
       //var display_position = 100;
@@ -74,7 +74,7 @@ class Game {
         if (index === player.index){
           stroke(10); fill("red"); ellipse(x,y,60,60);
           cars[index - 1].shapeColor = "red";
-          camera.position.x = displayWidth/2;
+          //camera.position.x = displayWidth/2;
           camera.position.y = cars[index-1].y;
         }
        
@@ -112,9 +112,16 @@ class Game {
   end(){
     console.log("Game Ended");
     console.log(player.ranking);
-    player.updateCount(0);
-    Player.updateRanking(0);
-  game.update(0)
+    //player.updateCount(0);
+    //Player.updateRanking(0);
+  //game.update(0)
   } 
    
+  /*colision(index){
+    if (index==1){
+    if (cars[index-1].collide(cars[1])){
+
+    }
+    }
+  }*/
 }
